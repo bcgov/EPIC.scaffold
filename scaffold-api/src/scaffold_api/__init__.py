@@ -63,8 +63,6 @@ def create_app(run_mode=os.getenv("FLASK_ENV", "development")):
 
     # # Database migrate initialize
     migrate.init_app(app, db)
-    with app.app_context():
-        db.create_all()
 
     # Marshmallow initialize
     ma.init_app(app)
